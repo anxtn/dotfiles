@@ -1,0 +1,17 @@
+HISTFILE="$ZDOTDIR/zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+setopt append_history
+
+autoload -Uz compinit
+compinit
+
+alias vi='nvim'
+alias gs='git status'
+alias ll='ls -la'
+alias ....='../../'
+alias ......='../../../'
+
+bindkey -v
+
+setopt NO_BEEP
