@@ -9,6 +9,17 @@ return {
         { "<leader>ft", "<cmd>Telescope live_grep<CR>",  desc = "Find Text" },
     },
     config = function()
-        require("telescope").setup({})
+        require("telescope").setup({
+            pickers = {
+                find_files = {
+                    hidden = true,
+                },
+                live_grep = {
+                    additional_args = function(opts)
+                        return { "--hidden" }
+                    end
+                },
+            }
+        })
     end,
 }
