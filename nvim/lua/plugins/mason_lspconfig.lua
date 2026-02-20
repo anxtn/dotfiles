@@ -15,6 +15,7 @@ return {
                     "rust_analyzer", -- rust
                     "lemminx", -- xml
                     "zls", -- zig 
+                    "jsonls" --json
                 },
             })
         end,
