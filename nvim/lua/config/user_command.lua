@@ -29,18 +29,18 @@ vim.api.nvim_create_user_command("LspVerboseInfo",
 )
 
 
-vim.api.nvim_create_user_command(
-    "LspInfo",
-    function(opts)
-        local clients = vim.lsp.get_clients({ bufnr = 0 })
-        if (clients == nil) or (#clients < 0) then
-            vim.notify("No LSP active", vim.log.levels.INFO)
-            return
-        end
-        for _, client in pairs(clients) do
-            local msg = get_lsp_client_info_str(client)
-            vim.notify(msg, vim.log.levels.INFO);
-        end
-    end,
-    { nargs = "*", desc = "Displays important LSP Infos of the current active LSP" }
-)
+--vim.api.nvim_create_user_command(
+--"LspInfo",
+--function(opts)
+--local clients = vim.lsp.get_clients({ bufnr = 0 })
+--if (clients == nil) or (#clients < 0) then
+--vim.notify("No LSP active", vim.log.levels.INFO)
+--return
+--end
+--for _, client in pairs(clients) do
+--local msg = get_lsp_client_info_str(client)
+--vim.notify(msg, vim.log.levels.INFO);
+--end
+--end,
+--{ nargs = "*", desc = "Displays important LSP Infos of the current active LSP" }
+--)
