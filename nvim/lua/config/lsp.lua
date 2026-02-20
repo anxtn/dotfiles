@@ -1,13 +1,3 @@
-vim.lsp.enable({
-    "clangd",
-    "lua_ls",
-    "pyright",
-    "vtsls",
-    "rust_analyzer",
-    "zls",
---    "delphiLSP",
-})
-
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
         local bufnr = args.buf

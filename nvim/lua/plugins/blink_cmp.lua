@@ -4,8 +4,7 @@ return {
         dependencies = { 'rafamadriz/friendly-snippets' },
 
         version = '1.*',
-        ---@module 'blink.cmp'
-        ---@type blink.cmp.Config
+        ---@module 'blink-cmp'
         opts = {
             keymap = {
                 preset = "none",
@@ -26,7 +25,14 @@ return {
             },
 
             sources = {
-                default = { 'lsp', 'path' },
+                default = { 'lsp', 'path', 'buffer', 'lazydev', 'snippets' },
+                providers = {
+                    lazydev = {
+                        name = 'LazyDev',
+                        module = 'lazydev.integrations.blink',
+                        score_offset = 100;
+                    }
+                }
             },
 
             fuzzy = {
