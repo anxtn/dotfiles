@@ -22,6 +22,7 @@ return {
                     "query",
                     "rust",
                     "typescript",
+                    "tsx",
                     "vim",
                     "vimdoc",
                     "xml",
