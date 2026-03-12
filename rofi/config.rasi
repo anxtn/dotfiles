@@ -1,0 +1,218 @@
+configuration {
+show-icons: true;
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+
+  // Paste primary selection
+  kb-primary-paste: "Control+V,Shift+Insert";
+  // Paste clipboard
+  kb-secondary-paste: "Control+v,Insert";
+  // Copy current selection to clipboard
+  kb-secondary-copy: "Control+c";
+  // Clear input line
+  kb-clear-line: "Control+w";
+  // Beginning of line
+  kb-move-front: "Control+a";
+  // End of line
+  kb-move-end: "Control+e";
+  // Move back one word
+  kb-move-word-back: "Alt+b,Control+Left";
+  // Move forward one word
+  kb-move-word-forward: "Alt+f,Control+Right";
+  // Move back one char
+  kb-move-char-back: "Left,Control+b";
+  // Move forward one char
+  kb-move-char-forward: "Right,Control+f";
+  // Delete previous word
+  kb-remove-word-back: "Control+Alt+h,Control+BackSpace";
+  // Delete next word
+  kb-remove-word-forward: "Control+Alt+d";
+  // Delete next char
+  kb-remove-char-forward: "Delete,Control+d";
+  // Delete previous char
+  kb-remove-char-back: "BackSpace,Shift+BackSpace,Control+h";
+  // Delete till the end of line
+  kb-remove-to-eol: "Control+k";
+  // Delete till the start of line
+  kb-remove-to-sol: "Control+u";
+  // Transpose (swap) the two characters before the cursor
+  kb-transpose-chars: "Control+t";
+  // Accept entry
+  kb-accept-entry: "Control+j,Control+m,Return,KP_Enter";
+  // Use entered text as command (in ssh/run modes)
+  kb-accept-custom: "Control+Return";
+  // Use entered text as command (in ssh/run modes)
+  kb-accept-custom-alt: "Control+Shift+Return";
+  // Use alternate accept command.
+  kb-accept-alt: "Shift+Return";
+  // Delete entry from history
+  kb-delete-entry: "Shift+Delete";
+  // Switch to the next mode.
+  kb-mode-next: "Shift+Right,Control+Tab";
+  // Switch to the previous mode.
+  kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";
+  // Start completion for mode.
+  kb-mode-complete: "Control+l";
+  // Go to the previous column
+  kb-row-left: "Control+Page_Up";
+  // Go to the next column
+  kb-row-right: "Control+Page_Down";
+  // Select previous entry
+  kb-row-up: "Up,Control+p";
+  // Select next entry
+  kb-row-down: "Down,Control+n";
+  // Go to next row, if one left, accept it, if no left next mode.
+  kb-row-tab: "";
+  // Go to next row.
+  kb-element-next: "Tab";
+  // Go to previous row.
+  kb-element-prev: "ISO_Left_Tab";
+  // Go to the previous page
+  kb-page-prev: "Page_Up";
+  // Go to the next page
+  kb-page-next: "Page_Down";
+  // Go to the first entry
+  kb-row-first: "Home,KP_Home";
+  // Go to the last entry
+  kb-row-last: "End,KP_End";
+  // Set selected item as input text
+  kb-row-select: "Control+space";
+  // Take a screenshot of the rofi window
+  kb-screenshot: "Alt+S";
+  // Toggle between ellipsize modes for displayed data
+  kb-ellipsize: "Alt+period";
+  // Toggle case sensitivity
+  kb-toggle-case-sensitivity: "grave,dead_grave";
+  // Toggle filtered menu sort
+  kb-toggle-sort: "Alt+grave";
+  // Quit rofi
+  kb-cancel: "Escape";
+  // Custom keybinding 1
+  kb-custom-1: "Alt+1";
+  // Custom keybinding 2
+  kb-custom-2: "Alt+2";
+  // Custom keybinding 3
+  kb-custom-3: "Alt+3";
+  // Custom keybinding 4
+  kb-custom-4: "Alt+4";
+  // Custom Keybinding 5
+  kb-custom-5: "Alt+5";
+  // Custom keybinding 6
+  kb-custom-6: "Alt+6";
+  // Custom Keybinding 7
+  kb-custom-7: "Alt+7";
+  // Custom keybinding 8
+  kb-custom-8: "Alt+8";
+  // Custom keybinding 9
+  kb-custom-9: "Alt+9";
+  // Custom keybinding 10
+  kb-custom-10: "Alt+0";
+  // Custom keybinding 11
+  kb-custom-11: "Alt+exclam";
+  // Custom keybinding 12
+  kb-custom-12: "Alt+at";
+  // Custom keybinding 13
+  kb-custom-13: "Alt+numbersign";
+  // Custom keybinding 14
+  kb-custom-14: "Alt+dollar";
+  // Custom keybinding 15
+  kb-custom-15: "Alt+percent";
+  // Custom keybinding 16
+  kb-custom-16: "Alt+dead_circumflex";
+  // Custom keybinding 17
+  kb-custom-17: "Alt+ampersand";
+  // Custom keybinding 18
+  kb-custom-18: "Alt+asterisk";
+  // Custom Keybinding 19
+  kb-custom-19: "Alt+parenleft";
+  // Select row 1
+  kb-select-1: "";
+  // Select row 2
+  kb-select-2: "";
+  // Select row 3
+  kb-select-3: "";
+  // Select row 4
+  kb-select-4: "";
+  // Select row 5
+  kb-select-5: "";
+  // Select row 6
+  kb-select-6: "";
+  // Select row 7
+  kb-select-7: "";
+  // Select row 8
+  kb-select-8: "";
+  // Select row 9
+  kb-select-9: "";
+  // Select row 10
+  kb-select-10: "";
+  // Go up in the entry history.
+  kb-entry-history-up: "Control+Up";
+  // Go down in the entry history.
+  kb-entry-history-down: "Control+Down";
+  // Select the next matcher.
+  kb-matcher-up: "";
+  // Select the previous matcher.
+  kb-matcher-down: "";
+  // Go to previous matcher
+  ml-row-left: "ScrollLeft";
+  // Go to the next column
+  ml-row-right: "ScrollRight";
+  // Select previous entry
+  ml-row-up: "ScrollUp";
+  // Select next entry
+  ml-row-down: "ScrollDown";
+  // Select hovered row
+  me-select-entry: "MousePrimary";
+  // Accept hovered row
+  me-accept-entry: "MouseDPrimary";
+  // Accept hovered row with custom action
+  me-accept-custom: "Control+MouseDPrimary";
+}
+
+* {
+    bg: #1e1e2e;
+    bg2: #4e4e4e;
+    fg: #cdd6f4;
+    accent: #89b4fa;
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    width: 30%;
+    background-color: @bg;
+    transparency: "real";
+    border: 2px;
+    border-color: @accent;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+inputbar {
+    children: [entry];
+    padding: 10px;
+    margin: 0 0 10px 0;
+    background-color: #313244;
+    border-radius: 8px;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+}
+
+element {
+    padding: 8px;
+    border-radius: 4px;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @bg;
+}
