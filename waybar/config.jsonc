@@ -13,7 +13,7 @@
     "modules-right": [
         "network",
         "bluetooth",
-        "idle_inhibitor"
+        "custom/power"
     ],
     "clock": {
         "format": "  {:%d.%m. | %H:%M}",
@@ -58,5 +58,10 @@
         "critical-threshold": 80,
         "format-critical": "{temperatureC}°C ",
         "format": "{temperatureC}°C "
+    },
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout", // Öffnet das Menü bei Klick
+        "tooltip": false
     }
 }
