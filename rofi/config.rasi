@@ -177,7 +177,6 @@ show-icons: true;
 
 * {
     bg: #1e1e2e;
-    bg2: #4e4e4e;
     fg: #cdd6f4;
     accent: #89b4fa;
     background-color: transparent;
@@ -209,7 +208,7 @@ listview {
 
 element {
     padding: 8px;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 element selected {
