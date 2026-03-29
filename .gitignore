@@ -1,2 +1,6 @@
 # only the zsh_plugins.txt is the right one
 zsh/.zsh_plugins.zsh
+blender/
+cava/
+Thunar/
+google-chrome/
