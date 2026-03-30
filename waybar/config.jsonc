@@ -16,7 +16,7 @@
     "modules-right": [
         "network",
         "bluetooth",
-        "custom/power"
+        "group/power"
     ],
     "clock": {
         "format": "  {:%d.%m. | %H:%M}",
@@ -72,9 +72,48 @@
         "format-critical": "{temperatureC}°C ",
         "format": " {temperatureC}°C"
     },
+    "group/power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/power",
+            "custom/suspend",
+            "custom/quit",
+            "custom/lock",
+            "custom/reboot"
+        ]
+    },
     "custom/power": {
-        "format": "⏻",
-        "on-click": "wlogout", // Öffnet das Menü bei Klick
-        "tooltip": false
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "shutdown",
+        "on-click": "shutdown now"
+    },
+    "custom/quit": {
+        "format": "󰈆",
+        "tooltip": true,
+        "tooltip-format": "quit",
+        "on-click": "hyprctl dispatch exit"
+    },
+    "custom/suspend": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "suspend",
+        "on-click": "systemctl suspend"
+    },
+    "custom/lock": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "lock",
+        "on-click": "swaylock"
+    },
+    "custom/reboot": {
+        "format": "󰑐",
+        "tooltip": true,
+        "tooltip-format": "reboot",
+        "on-click": "reboot"
     }
 }
