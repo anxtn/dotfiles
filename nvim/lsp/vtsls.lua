@@ -6,5 +6,5 @@ return {
                 pluginPaths = { "typescript-plugin-css-modules" }
             }
         }
-    }
+    },
 }
