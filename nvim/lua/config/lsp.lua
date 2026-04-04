@@ -52,10 +52,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
             )
         end
 
-        bind_qf_diagnostics('<leader>la', nil, 'LSP: Show qf diagnostics');
-        bind_qf_diagnostics('<leader>le', "ERROR", 'LSP: Show qf errors');
-        bind_qf_diagnostics('<leader>lw', "WARN", 'LSP: Show qf warning');
-        bind_qf_diagnostics('<leader>lh', "HINT", 'LSP: Show qf hints');
+        if client.name == logic_client then
+            bind_qf_diagnostics('<leader>la', nil, 'LSP: Show qf diagnostics');
+            bind_qf_diagnostics('<leader>le', "ERROR", 'LSP: Show qf errors');
+            bind_qf_diagnostics('<leader>lw', "WARN", 'LSP: Show qf warning');
+            bind_qf_diagnostics('<leader>lh', "HINT", 'LSP: Show qf hints');
+        end
 
         if client.name == logic_client then
             vim.keymap.set(
