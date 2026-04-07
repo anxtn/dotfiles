@@ -4,10 +4,11 @@ blender/
 cava/
 Thunar/
 google-chrome/
+chromium/
+mozilla/
 pulse/
 dconf/
 abrt/
 lxqt/
 xfce4/
-.mozilla/
 gh/
