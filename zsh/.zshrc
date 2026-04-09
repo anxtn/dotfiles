@@ -21,7 +21,7 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*:descriptions' format '%F{yellow}-- %d --%f'
 
 alias vi='nvim'
-alias gs='git status'
+alias gs='git status -s'
 alias ll='ls -la'
 
 bindkey -v
