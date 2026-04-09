@@ -23,6 +23,9 @@ zstyle ':completion:*:descriptions' format '%F{yellow}-- %d --%f'
 alias vi='nvim'
 alias gs='git status -s'
 alias ll='ls -la'
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
 
 bindkey -v
 
