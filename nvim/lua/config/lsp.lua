@@ -12,6 +12,8 @@ local format = {
     typescript = "biome",
     python = "pyright",
     zig = "zls",
+    html = "html",
+    xml = "lemminx"
 }
 
 local logic = {
@@ -28,6 +30,8 @@ local logic = {
     typescript = "vtsls",
     python = "pyright",
     zig = "zls",
+    html = "html",
+    xml = "lemminx"
 }
 
 vim.api.nvim_create_autocmd("LspAttach", {
