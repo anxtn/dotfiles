@@ -6,6 +6,7 @@ Thunar/
 google-chrome/
 chromium/
 mozilla/
+.mozilla/
 pulse/
 dconf/
 abrt/
