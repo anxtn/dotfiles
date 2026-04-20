@@ -67,7 +67,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
             vim.keymap.set(
                 "n",
                 "gd",
-                vim.lsp.buf.definition,
+                function()
+                    vim.lsp.buf.definition({ id = client.id })
+                    vim.notify(string.format('lsp definition [%s]', client.name));
+                end,
                 { buffer = bufnr, noremap = true, silent = true, desc = "LSP: Go to definition" }
             )
         end
@@ -78,6 +81,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
                 "<leader>lf",
                 function()
                     vim.lsp.buf.format({ id = client.id })
+                    vim.notify(string.format('lsp format [%s]', client.name));
                 end,
                 { buffer = bufnr, noremap = true, silent = true, desc = "LSP: Format file" }
             )
