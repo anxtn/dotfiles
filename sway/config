@@ -17,6 +17,13 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
 output * bg /usr/share/backgrounds/default.jxl fill
 
+### Monitor-Setup
+# Acer (Steht links)
+output HDMI-A-1 mode 1920x1080@100Hz position 0 0
+
+# Century / M24-FHD (Steht rechts)
+output DP-1 mode 1920x1080@165Hz position 1920 0
+
 ### Idle configuration
 #
 # Example configuration:
