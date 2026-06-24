@@ -13,7 +13,8 @@ local format = {
     python = "pyright",
     zig = "zls",
     html = "html",
-    xml = "lemminx"
+    xml = "lemminx",
+    cs = "omnisharp",
 }
 
 local logic = {
@@ -31,7 +32,8 @@ local logic = {
     python = "pyright",
     zig = "zls",
     html = "html",
-    xml = "lemminx"
+    xml = "lemminx",
+    cs = "omnisharp",
 }
 
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -58,9 +60,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
         if client.name == logic_client then
             bind_qf_diagnostics('<leader>la', nil, 'LSP: Show qf diagnostics');
-            bind_qf_diagnostics('<leader>le', "ERROR", 'LSP: Show qf errors');
-            bind_qf_diagnostics('<leader>lw', "WARN", 'LSP: Show qf warning');
-            bind_qf_diagnostics('<leader>lh', "HINT", 'LSP: Show qf hints');
+            bind_qf_diagnostics('<leader>le', vim.diagnostic.severity.ERROR, 'LSP: Show qf errors');
+            bind_qf_diagnostics('<leader>lw', vim.diagnostic.severity.WARN, 'LSP: Show qf warning');
+            bind_qf_diagnostics('<leader>lh', vim.diagnostic.severity.HINT, 'LSP: Show qf hints');
         end
 
         if client.name == logic_client then

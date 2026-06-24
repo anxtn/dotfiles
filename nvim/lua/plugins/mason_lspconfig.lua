@@ -19,6 +19,7 @@ return {
                     "jsonls",
                     "biome",
                     "html",
+                    "omnisharp"
                 },
             })
         end,

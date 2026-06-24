@@ -7,10 +7,11 @@ return {
         ---@module 'blink-cmp'
         opts = {
             keymap = {
-                preset = "none",
-                ["<Tab>"] = { "select_next", "fallback", },
-                ["<S-Tab>"] = { "select_prev", "fallback", },
-                ['<C-space>'] = { "show", "fallback", },
+                preset = "default",
+
+                ['<C-j>'] = { 'select_next', 'fallback' },
+                ['<C-k>'] = { 'select_prev', 'fallback' },
+                ['<Tab>'] = { 'accept', 'fallback' }
             },
 
             appearance = {
@@ -30,7 +31,7 @@ return {
                     lazydev = {
                         name = 'LazyDev',
                         module = 'lazydev.integrations.blink',
-                        score_offset = 100;
+                        score_offset = 100,
                     }
                 }
             },
