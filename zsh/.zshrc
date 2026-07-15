@@ -14,6 +14,8 @@ export HISTFILE="$XDG_DATA_HOME/zsh/history"
 export HISTSIZE=10000
 export SAVEHIST=10000
 
+export SUDO_EDITOR=nvim
+
 autoload -Uz compinit && compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
@@ -37,3 +39,7 @@ antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+export PATH="$HOME/.local/bin:$PATH"
+
+eval "$(zoxide init zsh)"
