@@ -1,6 +1,24 @@
-return {
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-    }
-}
+require("nvim-treesitter").install({
+    "bash",
+    "c",
+    "c_sharp",
+    "cmake",
+    "cpp",
+    "css",
+    "html",
+    "javascript",
+    "json",
+    "lua",
+    "markdown",
+    "markdown_inline",
+    "python",
+    "query",
+    "rust",
+    "typescript",
+    "tsx",
+    "vim",
+    "vimdoc",
+    "pascal",
+    "xml",
+    "zig",
+})
