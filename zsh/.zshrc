@@ -42,4 +42,4 @@ antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
 export PATH="$HOME/.local/bin:$PATH"
 
-eval "$(zoxide init zsh)"
+command -v zoxide >/dev/null && eval "$(zoxide init zsh)"
