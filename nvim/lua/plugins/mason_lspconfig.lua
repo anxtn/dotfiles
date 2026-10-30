@@ -12,5 +12,6 @@ require("mason-lspconfig").setup({
         "biome",
         "html",
         "omnisharp",
+        "texlab",
     },
 })

@@ -15,6 +15,7 @@ local format = {
     html = "html",
     xml = "lemminx",
     cs = "omnisharp",
+    tex = "texlab",
 }
 
 local logic = {
@@ -34,6 +35,7 @@ local logic = {
     html = "html",
     xml = "lemminx",
     cs = "omnisharp",
+    tex = "texlab",
 }
 
 vim.api.nvim_create_autocmd("LspAttach", {
