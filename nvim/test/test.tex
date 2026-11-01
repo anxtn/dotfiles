@@ -1,0 +1,43 @@
+\documentclass[12pt, a4paper]{article}
+
+% Paket-Importe
+\usepackage[utf8]{utf8}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{Neovim LaTeX-Integrationstest}
+\author{Test Benutzer}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Einführung}
+\label{sec:einfuehrung}
+Dies ist ein Testdokument für die Neovim-Integration. Wir testen hier die
+Syntag-Hervorhebung, das Kompilieren sowie die Vorwärts- und Rückwärtssuche.
+
+\section{Mathematik-Test}
+\label{sec:mathe}
+Ein einfacher In-Line-Test: $E = mc^2$ oder $a^2 + b^2 = c^2$.
+
+Hier ist eine abgesetzte Gleichung mit Nummerierung für die LSP-Referenzierung:
+\begin{equation}
+    \label{eq:einstein}
+    \int_{-\infty}^{\infty} e^{-x^2} \, dx = \sqrt{\pi}
+\end{equation}
+
+\section{Referenzen \& Navigations-Test}
+\label{sec:referenzen}
+In Abschnitt \ref{sec:einfuehrung} haben wir begonnen. Wie in Gleichung
+\ref{eq:einstein} zu sehen ist, funktioniert das Mathe-Set hervorragend.
+
+\section{LSP-Diagnose-Test (Syntax-Fehler)}
+% Der folgende Befehl löst bei aktiviertem ChkTeX / TexLab eine Linter-Warnung aus,
+% da vor dem Punkt ein Leerzeichen steht :
+Das ist ein Test für die Fehlersuche .
+
+\end{document}
