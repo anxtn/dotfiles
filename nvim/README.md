@@ -1,5 +1,9 @@
 # Neovim Config
 
+Personal Neovim config for **Neovim 0.12+**. Plugins are managed with the native
+`vim.pack` (no lazy.nvim), LSP servers are installed by Mason and configured via
+the native `vim.lsp` API.
+
 ## Requirements 📦
 
 ### Required
@@ -91,6 +95,48 @@ On Fedora and Debian/Ubuntu install a Nerd Font manually from
 [nerdfonts.com](https://www.nerdfonts.com/font-downloads) (e.g. JetBrainsMono Nerd Font)
 and set it in your terminal.
 
+## Installation 🚀
+
+```sh
+git clone <this repo> ~/.config   # config lives in ~/.config/nvim
+nvim
+```
+
+On first start `vim.pack` asks to install all plugins (revisions pinned in
+`nvim-pack-lock.json`). Afterwards Mason installs the LSP servers and
+nvim-treesitter compiles the parsers in the background. Check the result with:
+
+```vim
+:checkhealth vim.pack
+:checkhealth vim.lsp
+:checkhealth vimtex
+```
+
+## Plugins 🧩
+
+| Plugin                                   | Purpose                              |
+|:-----------------------------------------|:-------------------------------------|
+| catppuccin (mocha)                       | colorscheme                          |
+| lualine.nvim                             | statusline                           |
+| alpha-nvim                               | start screen                         |
+| nvim-web-devicons                        | file icons                           |
+| nvim-autopairs                           | auto-close brackets/quotes           |
+| nvim-treesitter                          | parsers                              |
+| blink.cmp + friendly-snippets            | completion & snippets                |
+| lazydev.nvim                             | Neovim Lua API completion            |
+| mason.nvim + mason-lspconfig + nvim-lspconfig | LSP install & config            |
+| telescope.nvim + plenary.nvim            | fuzzy finder                         |
+| vimtex                                   | LaTeX compile / view / motions       |
+
+### LSP servers
+
+`lua_ls`, `clangd`, `cssls`, `pyright`, `vtsls`, `rust_analyzer`, `lemminx`, `zls`,
+`jsonls`, `biome`, `html`, `omnisharp`, `texlab`
+
+If several servers attach to one filetype, `lua/config/lsp.lua` decides which one
+handles formatting (e.g. `biome` for JS/TS/JSON/CSS) and which one handles
+go-to-definition and the diagnostic lists (e.g. `vtsls` for JS/TS).
+
 ## Keybindings ⌨️
 
 Leader is `SPACE`, local leader (VimTeX) is `\`.
@@ -158,3 +204,14 @@ Normal mode, in `.tex` files
 | Clean auxiliary files            | `\` `l` `c`     |
 
 Backward search: `CTRL` + click in zathura jumps to the line in Neovim.
+
+### Commands
+
+| Command           | Action                                              |
+|:------------------|:----------------------------------------------------|
+| `:LspVerboseInfo` | copy the LSP client dump of the buffer to `+` register |
+
+## Testing 🧪
+
+`test/` contains sample files per language (`test/c/test.c`, `test/latex/test.tex`, …)
+to manually check LSP, formatting, treesitter and VimTeX after changes.
