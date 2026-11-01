@@ -1,5 +1,96 @@
 # Neovim Config
 
+## Requirements 📦
+
+### Required
+
+| Tool                          | Used by                                                  |
+|:------------------------------|:---------------------------------------------------------|
+| Neovim ≥ 0.12                 | everything (`vim.pack`, `vim.lsp.config`)                |
+| `git`                         | `vim.pack` (plugin install/update)                       |
+| `curl`, `tar`, `gzip`, `unzip`| Mason, nvim-treesitter, blink.cmp (prebuilt binary)      |
+| C compiler (`gcc`)            | nvim-treesitter (compiles parsers)                       |
+| `tree-sitter` CLI ≥ 0.26.1    | nvim-treesitter (`main` branch, **not** the npm package) |
+| `ripgrep`                     | Telescope live grep (`SPACE f t`)                        |
+| `fd`                          | Telescope find files (faster, optional — falls back to `rg`) |
+| Node.js + `npm`               | Mason: `pyright`, `vtsls`, `biome`, `cssls`, `html`, `jsonls` |
+| `wl-clipboard`                | `+` register on Wayland (`:LspVerboseInfo`)              |
+| A [Nerd Font](https://www.nerdfonts.com/) | icons (devicons, lualine, diagnostics, Mason)  |
+
+### LaTeX (VimTeX + texlab)
+
+| Tool                                | Used by                                   |
+|:------------------------------------|:------------------------------------------|
+| TeX Live (LaTeX, AMS, beamer, babel-german, hyperref) | compiling documents     |
+| `latexmk`                           | VimTeX compiler                           |
+| `zathura` + PDF plugin (MuPDF/Poppler) | VimTeX viewer (`zathura_simple`)       |
+
+### Optional (per language)
+
+Only needed if you work in that language — the LSP server itself is installed by Mason.
+
+| Tool              | Language / LSP          |
+|:------------------|:------------------------|
+| `rust` + `cargo`  | Rust / `rust_analyzer`  |
+| `zig`             | Zig / `zls`             |
+| .NET SDK          | C# / `omnisharp`        |
+| `python3`         | Python / `pyright`      |
+
+### Install commands
+
+**Fedora (dnf)**
+
+```sh
+# required
+sudo dnf install neovim git curl tar gzip unzip gcc tree-sitter-cli ripgrep fd-find nodejs npm wl-clipboard
+
+# LaTeX
+sudo dnf install texlive-scheme-medium texlive-collection-langgerman latexmk zathura zathura-pdf-mupdf
+
+# optional languages
+sudo dnf install rust cargo zig dotnet-sdk-10.0 python3
+```
+
+**Debian / Ubuntu (apt)**
+
+```sh
+# required
+sudo apt install git curl tar gzip unzip build-essential ripgrep fd-find nodejs npm wl-clipboard
+
+# LaTeX
+sudo apt install texlive-latex-base texlive-latex-recommended texlive-latex-extra \
+    texlive-fonts-recommended texlive-lang-german latexmk zathura
+
+# optional languages
+sudo apt install rustc cargo dotnet-sdk-8.0 python3
+```
+
+> [!NOTE]
+> The `neovim` and `tree-sitter-cli` packages in Debian/Ubuntu stable are usually too old.
+> Install Neovim from the [official releases](https://github.com/neovim/neovim/releases)
+> and the tree-sitter CLI from its [releases](https://github.com/tree-sitter/tree-sitter/releases)
+> or via `cargo install --locked tree-sitter-cli`. Zig is not packaged in Debian stable —
+> download it from [ziglang.org](https://ziglang.org/download/).
+> On Debian/Ubuntu the `fd` binary is called `fdfind` (Telescope finds it automatically).
+
+**Arch Linux (pacman)**
+
+```sh
+# required
+sudo pacman -S neovim git curl tar gzip unzip base-devel tree-sitter-cli ripgrep fd nodejs npm wl-clipboard ttf-jetbrains-mono-nerd
+
+# LaTeX (latexmk is part of texlive-binextra)
+sudo pacman -S texlive-basic texlive-latex texlive-latexrecommended texlive-latexextra \
+    texlive-fontsrecommended texlive-langgerman texlive-binextra zathura zathura-pdf-mupdf
+
+# optional languages
+sudo pacman -S rust zig dotnet-sdk python
+```
+
+On Fedora and Debian/Ubuntu install a Nerd Font manually from
+[nerdfonts.com](https://www.nerdfonts.com/font-downloads) (e.g. JetBrainsMono Nerd Font)
+and set it in your terminal.
+
 ## Keybindings ⌨️
 
 Leader is `SPACE`, local leader (VimTeX) is `\`.
