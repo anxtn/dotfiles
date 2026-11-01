@@ -14,3 +14,12 @@ lxqt/
 xfce4/
 gh/
 mimeapps.list
+
+# claude code: only track config, never credentials/history/sessions
+claude/*
+!claude/settings.json
+!claude/CLAUDE.md
+!claude/agents/
+!claude/commands/
+!claude/skills/
+claude/skills/synced/
