@@ -15,7 +15,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
-output * bg /usr/share/backgrounds/bg.png fill
+output * bg #1e1e2e solid_color
 
 ### Monitor-Setup
 # Acer (Steht links)
@@ -43,13 +43,9 @@ input * {
 	xkb_layout de
 }
     bindsym $mod+Return exec $term
-
     bindsym $mod+Shift+q kill
-
     bindsym $mod+d exec $menu
-
     floating_modifier $mod normal
-
     bindsym $mod+Shift+c reload
 
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
