@@ -56,6 +56,10 @@
     "telescope.nvim": {
       "rev": "427b576c16792edad01a92b89721d923c19ad60f",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
+    },
+    "vimtex": {
+      "rev": "3f96503904db6acdb7108cd93a9580dd41e88555",
+      "src": "https://github.com/lervag/vimtex"
     }
   }
 }
