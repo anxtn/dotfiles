@@ -38,13 +38,13 @@ show-icons: true;
   // Delete previous char
   kb-remove-char-back: "BackSpace,Shift+BackSpace,Control+h";
   // Delete till the end of line
-  kb-remove-to-eol: "Control+k";
+  kb-remove-to-eol: "";
   // Delete till the start of line
   kb-remove-to-sol: "Control+u";
   // Transpose (swap) the two characters before the cursor
   kb-transpose-chars: "Control+t";
   // Accept entry
-  kb-accept-entry: "Control+j,Control+m,Return,KP_Enter";
+  kb-accept-entry: "Control+m,Return,KP_Enter";
   // Use entered text as command (in ssh/run modes)
   kb-accept-custom: "Control+Return";
   // Use entered text as command (in ssh/run modes)
@@ -64,9 +64,9 @@ show-icons: true;
   // Go to the next column
   kb-row-right: "Control+Page_Down";
   // Select previous entry
-  kb-row-up: "Up,Control+p";
+  kb-row-up: "Up,Control+p,Control+k";
   // Select next entry
-  kb-row-down: "Down,Control+n";
+  kb-row-down: "Down,Control+n,Control+j";
   // Go to next row, if one left, accept it, if no left next mode.
   kb-row-tab: "";
   // Go to next row.
