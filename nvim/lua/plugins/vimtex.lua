@@ -4,3 +4,8 @@ vim.g.vimtex_view_method = "zathura_simple"
 vim.g.vimtex_compiler_latexmk = {
     out_dir = "build",
 }
+
+-- compile with LuaLaTeX by default (overridable per file via `%! TEX program = ...`)
+vim.g.vimtex_compiler_latexmk_engines = {
+    _ = "-lualatex",
+}
