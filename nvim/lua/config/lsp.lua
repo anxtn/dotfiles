@@ -36,6 +36,7 @@ local logic = {
     xml = "lemminx",
     cs = "omnisharp",
     tex = "texlab",
+    markdown = "marksman",
 }
 
 vim.api.nvim_create_autocmd("LspAttach", {

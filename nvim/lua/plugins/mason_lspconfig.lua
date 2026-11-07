@@ -13,5 +13,6 @@ require("mason-lspconfig").setup({
         "html",
         "omnisharp",
         "texlab",
+        "marksman",
     },
 })
