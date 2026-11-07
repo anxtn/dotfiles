@@ -127,6 +127,7 @@ nvim-treesitter compiles the parsers in the background. Check the result with:
 | mason.nvim + mason-lspconfig + nvim-lspconfig | LSP install & config            |
 | telescope.nvim + plenary.nvim            | fuzzy finder                         |
 | vimtex                                   | LaTeX compile / view / motions       |
+| live-preview.nvim                        | Markdown browser preview (KaTeX, mermaid) |
 
 ### LSP servers
 
@@ -204,6 +205,16 @@ Normal mode, in `.tex` files
 | Clean auxiliary files            | `\` `l` `c`     |
 
 Backward search: `CTRL` + click in zathura jumps to the line in Neovim.
+
+### Markdown 📝
+
+Normal mode, in `.md` files
+
+| Action                                          | Key             |
+|:------------------------------------------------|:----------------|
+| Toggle live preview in browser (KaTeX, mermaid) | `SPACE` `m` `p` |
+
+Also available as `:LivePreview start` / `:LivePreview close` / `:LivePreview pick`.
 
 ### Commands
 
