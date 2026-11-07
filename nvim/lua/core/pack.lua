@@ -43,4 +43,5 @@ vim.pack.add({
     "https://github.com/nvim-lua/plenary.nvim",
     "https://github.com/nvim-telescope/telescope.nvim",
     "https://github.com/lervag/vimtex",
+    "https://github.com/brianhuster/live-preview.nvim",
 })
